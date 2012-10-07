@@ -23,5 +23,8 @@ function hr_assessments_i18n_features_override_default_overrides() {
   $overrides["field.node-assessment-field_asst_unit.field_instance|display|default|module"] = 'i18n_field';
   $overrides["field.node-assessment-field_asst_unit.field_instance|display|default|type"] = 'i18n_list_default';
 
+  // Exported overrides for: views_view
+  $overrides["views_view.assessment_registry.display|default|display_options|fields|field_asst_status|type"] = 'i18n_list_default';
+
  return $overrides;
 }

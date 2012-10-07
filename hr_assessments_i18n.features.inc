@@ -29,3 +29,12 @@ function hr_assessments_i18n_field_default_fields_alter(&$data) {
     $data['node-assessment-field_asst_unit']['field_instance']['display']['default']['type'] = 'i18n_list_default'; /* WAS: 'list_default' */
   }
 }
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function hr_assessments_i18n_views_default_views_alter(&$data) {
+  if (isset($data['assessment_registry'])) {
+    $data['assessment_registry']->display['default']->display_options['fields']['field_asst_status']['type'] = 'i18n_list_default'; /* WAS: '' */
+  }
+}
